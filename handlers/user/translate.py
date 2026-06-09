@@ -61,8 +61,8 @@ async def enuz(msg: types.Message, state: FSMContext):
     id = msg.photo[2]["file_id"]
     file = await bot.get_file(id)
     file_path = file.file_path
-    await bot.download_file(file_path, destination="/home/ergashfx2/DTMBOT/images/image.png")
-    img = Image.open('/home/ergashfx2/DTMBOT/images/image.png')
+    await bot.download_file(file_path, destination="images/image.png")
+    img = Image.open('images/image.png')
     result = pytesseract.image_to_string(img)
     translated = GoogleTranslator(source='auto', target='uz').translate(result)
     await msg.answer(translated)
@@ -74,7 +74,7 @@ async def enuz(msg: types.Message, state: FSMContext):
     id = msg.photo[2]["file_id"]
     file = await bot.get_file(id)
     file_path = file.file_path
-    await bot.download_file(file_path, destination="/home/ergashfx2/DTMBOT/images/image.png")
+    await bot.download_file(file_path, destination="images/image.png")
     img = Image.open('/home/ergashfx2/DTMBOT/images/image.png')
     result = pytesseract.image_to_string(img)
     translated = GoogleTranslator(source='auto', target='en').translate(result)
@@ -87,8 +87,8 @@ async def enuz(msg: types.Message, state: FSMContext):
     id = msg.photo[2]["file_id"]
     file = await bot.get_file(id)
     file_path = file.file_path
-    await bot.download_file(file_path, destination="/home/ergashfx2/DTMBOT/images/image.png")
-    img = Image.open('/home/ergashfx2/DTMBOT/images/image.png')
+    await bot.download_file(file_path, destination="images/image.png")
+    img = Image.open('images/image.png')
     result = pytesseract.image_to_string(img)
     translated = GoogleTranslator(source='auto', target='ru').translate(result)
     await msg.answer(translated)
@@ -100,8 +100,8 @@ async def enuz(msg: types.Message, state: FSMContext):
     id = msg.photo[2]["file_id"]
     file = await bot.get_file(id)
     file_path = file.file_path
-    await bot.download_file(file_path, destination="/home/ergashfx2/DTMBOT/images/image.png")
-    img = Image.open('/home/ergashfx2/DTMBOT/images/image.png')
+    await bot.download_file(file_path, destination="images/image.png")
+    img = Image.open('images/image.png')
     result = pytesseract.image_to_string(img,lang='rus')
     translated = GoogleTranslator(source='auto', target='uz').translate(result)
     await msg.answer(translated)
