@@ -12,7 +12,7 @@ from googletrans import Translator
 # pytesseract.pytesseract.tesseract_cmd = r'Tesseract-OCR/tesseract.exe'
 
 def translate_image(lan):
-    img = Image.open('/home/ergashfx2/DTMBOT/images/image.png')
+    img = Image.open('images/image.png')
     result = pytesseract.image_to_string(img)
     p = Translator()
     k = p.translate(result, dest=lan)
